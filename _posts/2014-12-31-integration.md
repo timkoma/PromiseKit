@@ -53,7 +53,7 @@ Please though! Update every now and again!
 
 ## Carthage
 
-Carthage support is coming, if you are capable, please add it and create a pull request!
+We have Carthage support for Swift. Objective C support coming.
 
 
 <div><a class="pagination" href="/swift">Next: Specifics Regarding Swift PromiseKit</a></div>
