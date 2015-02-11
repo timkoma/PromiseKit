@@ -48,6 +48,8 @@ Back in Terminal:
 pod install
 {% endhighlight %}
 
+CocoaPods will now set up your project to use PromiseKit.
+
 ## Step 4: Back to Xcode
 
 From now on your ***must*** open the Xcode Workspace (xcworkspace) rather than the Xcode Project (xcodeproj) for your project. The following Terminal command will do that for you now:
