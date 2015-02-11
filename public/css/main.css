@@ -151,7 +151,6 @@ code .external-link {
   margin-top: -1.5rem;
   box-sizing: border-box;
   width: auto;
-  font-size: 0.85em;
 }
 
 .contents ol, .contents ol li {
@@ -160,5 +159,9 @@ code .external-link {
 
 .contents ol {
   margin: 0.1rem;
+}
+
+.contents li {
+    font-size: 0.85em;
 }
 
