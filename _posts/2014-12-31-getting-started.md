@@ -72,6 +72,7 @@ In `.swift` files:
 import PromiseKit
 {% endhighlight %}
 
+<hr>
 
 # Advanced CocoaPods
 
