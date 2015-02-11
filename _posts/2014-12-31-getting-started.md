@@ -94,7 +94,7 @@ pod 'PromiseKit/UIAlertView'
 There is a CocoaPods subspec for every category and an umbrella subspec for every framework (eg. `Promisekit/Foundation`, `Promisekit/UIKit`, etc.). If you don’t want to think about it then choose `pod 'PromiseKit'` or `pod 'PromiseKit/all'`; `all` is *everything*. 
 
 <aside>
-Asking for just the `PromiseKit` pod gives you the 80% most people want, ie. `PMKPromise`, the `NSURLConnection` & `NSNotifcationCenter` category additions and the `UIKit` category additions.
+Asking for just the <code>PromiseKit</code> pod gives you the 80% most people want, ie. <code>PMKPromise</code>, the <code>NSURLConnection</code> & <code>NSNotifcationCenter</code> category additions and the <code>UIKit</code> category additions.
 </aside>
 
 
