@@ -25,7 +25,7 @@ First we must first ensure that our Terminal is open at the correct directory. E
 cd $(osascript -e 'tell application "Xcode" to get path of project 1')/..
 {% endhighlight %}
 
-Every project that uses CocoaPods must have a `Podfile`, a text file at your project’s root folder. Let’s create it:
+Every project that uses CocoaPods must have a `Podfile`: a text file at your project’s root folder that describes the libraries we want to import. Let’s create it:
 
 {% highlight bash %}
 touch Podfile && open -e Podfile
