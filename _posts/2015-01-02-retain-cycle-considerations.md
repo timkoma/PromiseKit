@@ -11,4 +11,4 @@ Provided all your promises resolve, the handlers will be released, and any retai
 
 The exception would be if you store the promise handler as a strong property on your class, but that would be a strange thing to do. Don’t do that.
 
-<div><a class="pagination" href="/promises-make-better-apps">Next: Promises Make Better Apps</a></div>
+<div><a class="pagination" href="/getting-started">Next: Getting Started With PromiseKit</a></div>

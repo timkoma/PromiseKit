@@ -1,0 +1,112 @@
+---
+category: docs
+layout: default
+---
+
+# Getting Started With PromiseKit
+
+The easiest way to get started with PromiseKit is to use [CocoaPods](http://cocoapods.org), a dependency manager for Cocoa libraries like PromiseKit. 
+
+## Step 1: Download CocoaPods
+
+Open the Terminal app (it can be found in *Applications* in the *Utilities* folder), type the following line and then press `enter`:
+
+{% highlight bash %}
+sudo gem install cocoapods && pod setup
+{% endhighlight %}
+
+You will be prompted for your password.
+
+## Step 2: Create a Podfile
+
+First we must first ensure that our Terminal is open at the correct directory. Ensure that your Xcode project is open, and that it is the *only* open Xcode project. Then type this into Terminal and press `enter`:
+
+{% highlight bash %}
+cd $(osascript -e 'tell application "Xcode" to get path of project 1')/..
+{% endhighlight %}
+
+Every project that uses CocoaPods must have a `Podfile`, a text file at your project’s root folder. Let’s create it:
+
+{% highlight bash %}
+touch Podfile && open -e Podfile
+{% endhighlight %}
+
+TextEdit will open, in the empty window type:
+
+{% highlight ruby %}
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'PromiseKit'
+{% endhighlight %}
+
+Save the file.
+
+## Step 3: Install Dependencies
+
+Back in Terminal:
+
+{% highlight bash %}
+pod install
+{% endhighlight %}
+
+## Step 4: Back to Xcode
+
+From now on your ***must*** open the Xcode Workspace (xcworkspace) rather than the Xcode Project (xcodeproj) for your project. The following Terminal command will do that for you now:
+
+{% highlight bash %}
+osascript -e 'tell application "Xcode" to quit' && open *.xcworkspace
+{% endhighlight %}
+
+## Step 5: Using PromiseKit
+
+In `.m` files you want to use promises:
+
+{% highlight objectivec %}
+#import <PromiseKit.h>
+{% endhighlight %}
+
+In `.swift` files:
+
+{% highlight swift %}
+import PromiseKit
+{% endhighlight %}
+
+
+# Advanced CocoaPods
+
+PromiseKit is modulized; if you only want `PMKPromise` and none of our category additions:
+
+{% highlight ruby %}
+pod 'PromiseKit/Promise'
+{% endhighlight %}
+
+Or if you only want some of our categories:
+
+{% highlight ruby %}
+pod 'PromiseKit/NSURLConnection'
+pod 'PromiseKit/UIActionSheet'
+pod 'PromiseKit/UIAlertView'
+# et cetera
+{% endhighlight %}
+
+There is a CocoaPods subspec for every category and an umbrella subspec for every framework (eg. `Promisekit/Foundation`, `Promisekit/UIKit`, etc.). If you don’t want to think about it then choose `pod 'PromiseKit'` or `pod 'PromiseKit/all'`; `all` is *everything*. 
+
+<aside>
+Asking for just the `PromiseKit` pod gives you the 80% most people want, ie. `PMKPromise`, the `NSURLConnection` & `NSNotifcationCenter` category additions and the `UIKit` category additions.
+</aside>
+
+
+# Integrating With Carthage
+
+Carthage is less imposing than CocoaPods. In your `Cartfile`:
+
+{% highlight ruby %}
+github "mxcl/PromiseKit"
+{% endhighlight %}
+
+
+# Integrating By Hand
+
+If you don’t want to use CocoaPods you can use [CocoaPods Packager](https://github.com/CocoaPods/cocoapods-packager) to generate a static version of PromiseKit and just embed that.
+
+
+<div><a class="pagination" href="/swift">Next: Specifics Regarding Swift PromiseKit</a></div>
