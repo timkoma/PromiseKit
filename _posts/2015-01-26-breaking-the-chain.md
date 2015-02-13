@@ -33,7 +33,7 @@ Throwing an exception always rejects that promise. It is often more convenient d
 
 `catch` always provides an `NSError`, so in the case where you (or some other library) throws you will get an NSError with the thrown object’s `description` set as the error’s `localizedDescription` property and the thrown object itself set as the  `PMKUnderlyingExceptionKey` key of the error’s `userInfo`.
 
-It would be fortunate if an exception would generate a string that is suitable to show an end-user. With this in mind it is always better to try to generate detailed, proper `NSError` objects when errors happen in your promises. PromiseKit makes good error handling *easy*, it would be a pity to spoil this bonus to user-experience by not showing a good error message.
+It’s unlikely an exception would generate a string that is suitable for end-user display. With this in mind it is always better to try to generate detailed, proper `NSError` objects when errors happen in your promises. PromiseKit makes good error handling *easy*, it would be a pity to spoil this bonus to user-experience by not showing a good error message.
 
 <aside>PromiseKit itself provides <i>excellent</i> error messages for all situations it handles <code>:)</code></aside>
 
