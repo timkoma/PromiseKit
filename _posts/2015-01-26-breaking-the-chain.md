@@ -35,6 +35,6 @@ Throwing an exception always rejects that promise. It is often more convenient d
 
 It would be fortunate if an exception would generate a string that is suitable to show an end-user. With this in mind it is always better to try to generate detailed, proper `NSError` objects when errors happen in your promises. PromiseKit makes good error handling *easy*, it would be a pity to spoil this bonus to user-experience by not showing a good error message.
 
-<aside>PromiseKit itself provides *excellent* error messages for all situations it handles <code>:)</code></aside>
+<aside>PromiseKit itself provides <i>excellent</i> error messages for all situations it handles <code>:)</code></aside>
 
 <div><a class="pagination" href="/tuples">Next: Resolving with Tuples</a></div>
