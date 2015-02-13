@@ -54,7 +54,7 @@ It’s important to remember that in order for your errors to propogate they mus
 
 PromiseKit has an additional bonus: unhandled errors (ie. errors that never get handled in a `catch`) are logged. If you like, we even provide [a mechanism][ueh] to execute your own code whenever errors are not caught.
 
-<aside>Even exceptions are caught during Promise execution and will cause the nearest catch handler to execute. When this happens the resulting <code>NSError</code> will have its localizedDescription set to the exception’s description. The thrown object will be stored in the error’s userInfo under <code>PMKUnderlyingExceptionKey</code>.</aside>
+<aside>Even exceptions are caught during Promise execution and will cause the nearest catch handler to execute. When this happens the resulting <code>NSError</code> will have its localizedDescription set to the exception’s description. The thrown object will be stored in the error’s <code>userInfo</code> under <code>PMKUnderlyingExceptionKey</code>.</aside>
 
 <aside>PromiseKit cannot catch exceptions thrown in other threads even if they were spawned inside handlers, even if the throw happens from a nested block inside a PromiseKit handler. If you have such situations, consider <code>dispatch_promise</code> or wrapping more of your asynchronous systems in other promises.</aside>
 
