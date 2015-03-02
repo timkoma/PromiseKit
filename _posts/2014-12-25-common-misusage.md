@@ -50,19 +50,47 @@ Although it is worth noting, that we could have just passed `fulfill` and
 `reject` straight to `then` and `catch`. This is a handy trick on
 ocassion negating the need for a block to wrap a single call to a block:
 
- {% highlight objectivec %}
- - (PMKPromise *)fetchParseAndStore {
-     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject){
-         [Thing fetch].then(^(id result){
-             return [Thing parse:result];
-         }).then(^(id result){
-             return [Thang store:result];
-         }).then(fulfill).catch(reject);
+{% highlight objectivec %}
+- (PMKPromise *)fetchParseAndStore {
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject){
+        [Thing fetch].then(^(id result){
+            return [Thing parse:result];
+        }).then(^(id result){
+            return [Thang store:result];
+        }).then(fulfill).catch(reject);
      }];
- }
- {% endhighlight %}
+}
+{% endhighlight %}
  
 However we are demonstrating this for instructional purposes. With the
 above situation, don’t use `+new:`.
 
+## Starting a Promise Chain with `dispatch_promise`
+
+{% highlight objectivec %}
+dispatch_promise(^{
+    // noop
+}).then(^{
+    return [NSURLConnection GET:url];
+}).then(^{
+    return foo;
+}).then(^{
+    //…
+});
+{% endhighlight %}
+
+The `dispatch_promise` is superfluous. Instead just chain straight off the promise from `NSURLConnection`:
+
+{% highlight objectivec %}
+[NSURLConnection GET:url].then(^{
+    //…
+}).then(^{
+    return foo;
+}).then(^{
+    //…
+});
+{% endhighlight %}
+
+ 
 <div><a class="pagination" href="/appendix">Next: Appendix</a></div>
+
