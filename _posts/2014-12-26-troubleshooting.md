@@ -67,4 +67,4 @@ You need to change the return type of your block. Clang is smart, but only so fa
 
 You see the `id` after the `^` and before the `{`? That’s the fix.
 
-<div><a class="pagination" href="/appendix">Next: Appendix</a></div>
+<div><a class="pagination" href="/common-misusage">Next: Common Misusage</a></div>

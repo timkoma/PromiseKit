@@ -3,17 +3,17 @@ category: home
 layout: default
 ---
 
-# What is a Promise?
+# What’s a Promise?
 
 A [promise](http://wikipedia.org/wiki/Promise_%28programming%29) represents the future value of an asynchronous task.
 
-# Sorry, what?
+# Sorry, What?
 
 A promise is an object that wraps an asynchronous task. Pass that object around, and write clean, ordered code; a logical, simple, modular stream of progression from one asynchronous task to another.
 
-# Right, OK… So Why Should I Care?
+# Oh. Cool…?
 
-Promises are better than alternatives because:
+Promises are neat because:
 
 1. They make asynchronous operations chainable and standardized;
 2. They clean up asynchronous spaghetti;
