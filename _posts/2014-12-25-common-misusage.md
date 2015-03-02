@@ -15,7 +15,7 @@ don’t do this:
 
 {% highlight objectivec %}
 - (PMKPromise *)fetchParseAndStore {
-    [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject){
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject){
         [Thing fetch].then(^(id result){
             return [Thing parse:result];
         }).then(^(id result){
@@ -52,7 +52,7 @@ ocassion negating the need for a block to wrap a single call to a block:
 
  {% highlight objectivec %}
  - (PMKPromise *)fetchParseAndStore {
-     [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject){
+     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject){
          [Thing fetch].then(^(id result){
              return [Thing parse:result];
          }).then(^(id result){
