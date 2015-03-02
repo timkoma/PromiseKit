@@ -10,7 +10,7 @@ Use PromiseKit with your favorite third party libraries:
 * [Parse](https://github.com/hathway/Parse-PromiseKit)
 * [RevMob](https://github.com/mxcl/PromiseKit/pull/47)
 * [AFNetworking](https://github.com/csotiriou/AFNetworking-PromiseKit) (alternatives:  [1](https://github.com/skeeet/AFNetworking-PromiseKit))
-* [YOUR LIBRARY HERE!](mailto:mxcl@me.com)
+* [Facebook SDK](https://github.com/FastrBooks/Facebook-PromiseKit)
 
 # How To Add Promises to Third Party Libraries
 
