@@ -37,8 +37,6 @@ Instead do this:
         return [Thing parse:result];
     }).then(^(id result){
         return [Thang store:result];
-    }).then(^(id result){
-        fulfill(result);
     });
 }
 {% endhighlight %}
