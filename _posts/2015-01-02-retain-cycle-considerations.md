@@ -34,12 +34,12 @@ It’s easy to do code like this though, and this code has a retain cycle, thoug
 
 {% highlight objectivec %}
 [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification usingBlock:^(NSNotification *note) {
-	[NSURLConnection GET:URL].then(^(id data){
-		[self scan:data];
-	})
+    [NSURLConnection GET:URL].then(^(id data){
+        [self scan:data];
+    })
 }
 {% endhighlight %}
 
-It’s safe to reference `self` in promises, but that doesn’t mean promise chains within **other** blocks are safe to reference `self`. Here `NSNotificationCenter` never relinquishes references to `self`. This is by its design. Be careful in these sort of situations, you need a *weak* reference to `self`.
+It’s safe to reference `self` inside promise handlers, but that doesn’t mean promise chains within **other** blocks can safely reference `self`. Here `NSNotificationCenter` never relinquishes references to `self`—per Apple’s design. Be careful, in these sort of situations you need a *weak* reference to `self`.
 
 <div><a class="pagination" href="/getting-started">Next: Getting Started With PromiseKit</a></div>
