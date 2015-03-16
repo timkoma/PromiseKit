@@ -33,7 +33,7 @@ In cases where you think the promise will outlive the object that `self` refers 
 It’s easy to do code like this though, and this code has a retain cycle, though it’s not because of the promises:
 
 {% highlight objectivec %}
-[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification usingBlock:^(NSNotification *note) {
+[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification usingBlock:^(NSNotification *note) {
 	[NSURLConnection GET:URL].then(^(id data){
 		[self scan:data];
 	})
