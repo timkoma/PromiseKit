@@ -1,7 +1,6 @@
 language: objective-c
 xcode_project: PromiseKit.xcodeproj
-xcode_scheme: PromiseKit
-xcode_sdk: iphonesimulator8.1
+xcode_scheme: PMKOSX
 before_install:
   - brew update
   - brew install carthage
