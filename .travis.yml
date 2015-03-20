@@ -5,4 +5,4 @@ xcode_sdk: iphonesimulator8.1
 before_install:
   - brew update
   - brew install carthage
-install: carthage bootstrap
+install: carthage bootstrap --verbose
