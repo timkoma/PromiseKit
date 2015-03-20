@@ -97,8 +97,7 @@ The Swift version is now modularized also:
 
 {% highlight ruby %}
 pod 'PromiseKit/Swift/Promise'
-
-# or:
+#…
 pod 'PromiseKit/Swift/UIKit'
 pod 'PromiseKit/Swift/MapKit'
 # et cetera
@@ -118,6 +117,7 @@ Carthage is less imposing than CocoaPods. In your `Cartfile`:
 github "mxcl/PromiseKit"
 {% endhighlight %}
 
+Note that *currently* only the Swift version will be built with Carthage.
 
 # Integrating By Hand
 
